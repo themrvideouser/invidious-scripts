@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Channel Name + ID
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      2022-03-09
 // @description  try to take over the world!
 // @author       You
 // @include      *dev.viewtube.io/*
