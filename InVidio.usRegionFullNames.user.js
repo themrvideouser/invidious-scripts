@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         InVidio.us Whitelisted Regions Full Names + Flags
 // @namespace    http://tampermonkey.net/
-// @version      0.2.1
+// @version      2022-03-09
 // @description  Tells you the names of the beautiful Countries where you can watch that Cat YouTube Video without Anti-GeoBlocking Tools like VPN, Tor, Proxies
 // @author       TheMrVideouser
 // @include      *dev.viewtube.io/*
 // @include      *grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion/*
+// @include      *inv.cthd.icu/*
 // @include      *inv.riverside.rocks/*
 // @include      *invidio.us/*
 // @include      *invidio.xamh.de/*
@@ -14,8 +15,10 @@
 // @include      *invidious-us.kavin.rocks/*
 // @include      *invidious.13ad.de/*
 // @include      *invidious.drycat.fr/*
+// @include      *invidious.esmailelbob.xyz/*
 // @include      *invidious.exonip.de/*
 // @include      *invidious.fdn.fr/*
+// @include      *invidious.flokinet.to/*
 // @include      *invidious.ggc-project.de/*
 // @include      *invidious.himiko.cloud/*
 // @include      *invidious.hub.ne.kr/*
@@ -24,17 +27,22 @@
 // @include      *invidious.namazso.eu/*
 // @include      *invidious.nixnet.xyz/*
 // @include      *invidious.noho.st/*
+// @include      *invidious.osi.kr/*
+// @include      *invidious.privacy.gd/*
 // @include      *invidious.s1gm4.eu/*
 // @include      *invidious.silkky.cloud/*
 // @include      *invidious.snopyta.org/*
 // @include      *invidious.tinfoil-hat.net/*
+// @include      *invidious.weblibre.org/*
+// @include      *invidious.zapashcanon.fr/*
+// @include      *tube.connect.cafe/*
 // @include      *tube.incognet.io/*
 // @include      *tube.poal.co/*
+// @include      *vid.mint.lgbt/*
 // @include      *vid.puffyan.us/*
 // @include      *vid.wxzm.sx/*
 // @include      *watch.nettohikari.com/*
 // @include      *y.com.cm/*
-// @include      *yewtu.be/*
 // @include      *yewtu.be/*
 // @include      *youtube.076.ne.jp/*
 // @include      *yt.artemislena.eu/*
@@ -45,9 +53,6 @@
 // @include      *yt.openalgeria.org/*
 // @include      *ytb.trom.tf/*
 // @include      *ytprivate.com/*
-// @include      *inv.cthd.icu/*
-// @include      *tube.connect.cafe/*
-// @include      *ytprivate.com/watch?v=bGyixX7QJVE
 // @icon         data:image/png;base64,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
 // @grant        none
 // ==/UserScript==
@@ -65,14 +70,19 @@
 // Attribute FlatIcon: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 // changelog:
-// v0.1
-// replace Iso Country Codes with actual Country Names
-//
-// v0.2
-// flags
+
+// v0.2.2 (2022-03-09)
+// sorted instances
+
 // v0.2.1 (2021-10-29)
 // added some urls
 
+// v0.2
+// flags
+
+// v0.1
+// replace Iso Country Codes with actual Country Names
+//
 (function () {
     'use strict';
     var isoCountry2 = {
